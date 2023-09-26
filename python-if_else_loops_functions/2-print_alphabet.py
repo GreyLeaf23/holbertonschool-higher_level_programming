@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for alpha in range(ord('a'), ord('z')+1):
-    print(chr(alpha), end='')
+for alpha in range(97, 123):
+    if alpha !=101 and alpha != 113:
+        print(chr(alpha), end='')
