@@ -10,8 +10,8 @@ if number < 0:
 if l_digit > 5:
     print("{} is {} and is greater than 5".format(s_str, l_digit))
 
-elif number == 0:
+elif l_digit == 0:
     print("{} is {} and is 0".format(s_str, l_digit))
 
-if number < 0:
+else:
     print("{} is {} and is less than 6 and not 0".format(s_str, l_digit))
