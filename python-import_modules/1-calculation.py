@@ -1,37 +1,18 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    # Importing 'add' function from module.
-    from calculator_1 import add
+    from calculator_1 import add, sub, mul, div
 
     a = 10
     b = 5
-    result = add(a, b)
 
-    print("{} + {} = {}".format(a, b, result))
+    # Using 'add' function from module.
+    print("{} + {} = {}".format(a, b, add(a, b)))
 
-    # Importing 'sub' function from module.
-    from calculator_1 import sub
+    # Using 'sub' function from module.
+    print("{} - {} = {}".format(a, b, sub(a, b)))
 
-    a = 10
-    b = 5
-    result = sub(a, b)
+    # Using 'mul' function from module.
+    print("{} * {} = {}".format(a, b, mul(a, b)))
 
-    print("{} - {} = {}".format(a, b, result))
-
-    # Importing 'mul' function from module.
-    from calculator_1 import mul
-
-    a = 10
-    b = 5
-    result = mul(a, b)
-
-    print("{} * {} = {}".format(a, b, result))
-
- # Importing 'div' function from module.
-    from calculator_1 import div
-
-    a = 10
-    b = 5
-    result = div(a, b)
-
-    print("{} / {} = {}".format(a, b, result))
+    # Using 'div' function from module.
+    print("{} / {} = {}".format(a, b, div(a, b)))
