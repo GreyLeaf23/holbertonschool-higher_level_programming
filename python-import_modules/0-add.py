@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 #Importing function from 'add_0.py' file/module.
-if __name__ is "__main__":
+if __name__ == "__main__":
 
     from add_0 import add
 
