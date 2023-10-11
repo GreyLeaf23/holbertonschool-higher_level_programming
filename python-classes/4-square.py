@@ -17,17 +17,14 @@ class Square:
         else:
             self.__size = size
 
-
     def area(self):
         """Define square area"""
         return self.__size ** 2
-
 
     @property
     def size(self):
         """Get square size"""
         return self.__size
-
 
     @size.setter
     def size(self, value):
