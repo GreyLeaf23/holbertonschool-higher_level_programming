@@ -1,0 +1,68 @@
+# 3-say_my_name.txt : test file
+
+=======================================
+"3-say_my_name.py" function's intention.
+=======================================
+
+In this module, we are defining a function to print the first and last name of a person.
+
+Prototype:
+def say_my_name(first_name, last_name="")
+
+====================
+How to use function.
+====================
+
+The 'say_my_name(...)' returns string of characters
+that represent the first and last name.
+
+=====================
+SUCCESSFUL Execution:
+=====================
+
+"""Prints full name of programmer."""
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>>
+    >>> say_my_name("Christian", "Rosario")
+    My name is Christian Rosario
+    >>>
+
+=================
+FAILED Execution:
+=================
+
+"""Inserting an integer argument."""
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>>
+    >>> say_my_name(2, "Rosario")
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>>
+
+"""Having a list as an argument."""
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>>
+    >>> say_my_name("Cookies", ["Oatmeal", "Macadamia", "Chocolate"])
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+    >>>
+
+"""No arguments."""
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>>
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+    >>>
+
+"""Too many arguments."""
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>>
+    >>> say_my_name("Christian", "Joel", "Rosario")
+    Traceback (most recent call last):
+    ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+    >>>

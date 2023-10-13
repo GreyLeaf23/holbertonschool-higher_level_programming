@@ -21,89 +21,90 @@ SUCCESSFUL Execution:
 =====================
 
 """It can perform division on integer elements."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>>
->>> print(matrix_divided(matrix, 3))
-[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>>
+    >>> print(matrix_divided(matrix, 3))
+    [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+    >>>
 
 """It can perform division on float elements."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1.4, 2, 3], [4, 5, 6.9]]
->>>
->>> print(matrix_divided(matrix, 3))
-[[0.47, 0.67, 1.0], [1.33, 1.67, 2.3]]
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1.4, 2, 3], [4, 5, 6.9]]
+    >>>
+    >>> print(matrix_divided(matrix, 3))
+    [[0.47, 0.67, 1.0], [1.33, 1.67, 2.3]]
+    >>>
 
 =================
 FAILED Execution:
 =================
 
 """Cannot perform division on string elements."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>>
->>> print(matrix_divided(matrix, "string"))
-Traceback (most recent call last):
-...
-TypeError: div must be a number
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>>
+    >>> print(matrix_divided(matrix, "string"))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+    >>>
 
 """Cannot perform if there are NO elements to divide."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>>
->>> print(matrix_divided(matrix, None))
-Traceback (most recent call last):
-...
-TypeError: div must be a number
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>>
+    >>> print(matrix_divided(matrix, None))
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+    >>>
 
 """Cannot perform division if matrix list is NOT create it correctly."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = {1, 2, 3, 4, 5, 6}
->>>
->>> print(matrix_divided(matrix, 3))
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = {1, 2, 3, 4, 5, 6}
+    >>>
+    >>> print(matrix_divided(matrix, 3))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>>
 
 """Cannot perform division if there are missing elements."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>>
->>> print(matrix_divided(matrix))
-Traceback (most recent call last):
-...
-TypeError: matrix_divided() missing 1 required positional argument: 'div'
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>>
+    >>> print(matrix_divided(matrix))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+    >>>
 
 """Cannot perform division with '0' as an element."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>>
->>> print(matrix_divided(matrix, 0))
-Traceback (most recent call last):
-...
-ZeroDivisionError: division by zero
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>>
+    >>> print(matrix_divided(matrix, 0))
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by zero
+    >>>
 
 """Cannot perform division if matrix list is empty."""
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
->>>
->>> matrix = [[1, 2, 3], [4, 5, 6]]
->>>
->>> print(matrix_divided(None, 3))
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
->>>
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+    >>>
+    >>> matrix = [[1, 2, 3], [4, 5, 6]]
+    >>>
+    >>> print(matrix_divided(None, 3))
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>>
+
