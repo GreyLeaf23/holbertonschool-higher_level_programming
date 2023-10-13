@@ -1,0 +1,103 @@
+# 4-print_square.txt : test file
+
+=======================================
+"4-print_square.py" function's intention.
+=======================================
+
+In this module, we are defining a function that prints squares.
+
+Prototype:
+    def print_square(size)
+
+====================
+How to use function.
+====================
+
+The 'print_square(...)' returns a '#' as the
+representation of a square.
+
+=====================
+SUCCESSFUL Execution:
+=====================
+
+"""Prints specify number of squares."""
+    >>> print_square = __import__('4-print_square').print_square
+    >>>
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+    >>>
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    >>>
+    >>> print_square(0)
+    >>>
+    >>> print_square(1)
+    #
+    >>>
+
+=================
+FAILED Execution:
+=================
+
+"""Negative numbers."""
+    >>> print_square = __import__('4-print_square').print_square
+    >>>
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/4-print_square.py", line 16, in print_square
+        raise ValueError("size must be >= 0")
+    ValueError: size must be >= 0
+    >>>
+
+"""Float numbers."""
+    >>> print_square = __import__('4-print_square').print_square
+    >>>
+    >>> print_square(2.5)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/4-print_square.py", line 14, in print_square
+        raise TypeError("size must be an integer")
+    TypeError: size must be an integer
+    >>>
+
+"""String arguments"""
+    >>> print_square = __import__('4-print_square').print_square
+    >>>
+    >>> print_square("Cookies")
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/4-print_square.py", line 14, in print_square
+        raise TypeError("size must be an integer")
+    TypeError: size must be an integer
+    >>>
+
+"""Additional arguments."""
+    >>> print_square = __import__('4-print_square').print_square
+    >>>
+    >>> print_square(2, 5)
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    TypeError: print_square() takes 1 positional argument but 2 were given
+    >>>
+
+"""No arguments."""
+    >>> print_square = __import__('4-print_square').print_square
+    >>>
+    >>> print_square()
+    Traceback (most recent call last):
+    File "<stdin>", line 1, in <module>
+    TypeError: print_square() missing 1 required positional argument: 'size'
+    >>>
