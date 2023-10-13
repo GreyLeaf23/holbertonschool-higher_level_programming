@@ -49,9 +49,7 @@ FAILED Execution:
 >>>
 >>> print(matrix_divided(matrix, "string"))
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 21, in matrix_divided
-    raise TypeError("div must be a number")
+...
 TypeError: div must be a number
 >>>
 
@@ -62,9 +60,7 @@ TypeError: div must be a number
 >>>
 >>> print(matrix_divided(matrix, None))
 Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-  File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 21, in matrix_divided
-    raise TypeError("div must be a number")
+...
 TypeError: div must be a number
 >>>
 
@@ -74,6 +70,39 @@ TypeError: div must be a number
 >>> matrix = {1, 2, 3, 4, 5, 6}
 >>>
 >>> print(matrix_divided(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>>
+
+"""Cannot perform division if there are missing elements."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>>
+>>> print(matrix_divided(matrix))
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>>
+
+"""Cannot perform division with '0' as an element."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>>
+>>> print(matrix_divided(matrix, 0))
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>>
+
+"""Cannot perform division if matrix list is empty."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>>
+>>> print(matrix_divided(None, 3))
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
