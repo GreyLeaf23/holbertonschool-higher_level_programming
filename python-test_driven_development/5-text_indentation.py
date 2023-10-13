@@ -4,12 +4,14 @@ after each of these characters: ., ? and :"""
 
 
 def text_indentation(text):
-    """Prints 2 new lines after
-    specified characters."""
+    """
+    Prints text with 2 new lines after each ".", "?", and ":"
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    else:
-        text = text.replace(". ", ".\n\n")
-        text = text.replace("? ", "?\n\n")
-        text = text.replace(": ", ":\n\n")
-        print(text, end="")
+
+    for char in ".?:":
+        text = text.replace(char, char + "\n\n")
+    list_lines = [lines.strip(' ') for lines in text.split('\n')]
+    revised = "\n".join(list_lines)
+    print(revised, end="")
