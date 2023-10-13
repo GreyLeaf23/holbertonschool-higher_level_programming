@@ -1,0 +1,69 @@
+# 2-matrix_divided.txt : test file
+
+=======================================
+"2-matrix_divided.py" function's intention.
+=======================================
+
+In this module, we are defining a function that divides all elements of a matrix.
+
+Prototype:
+    def matrix_divided(matrix, div)
+
+====================
+How to use function.
+====================
+
+The 'matrix_divided(...)' returns a new matrix that its elements
+are divided by 'div'.
+
+=====================
+SUCCESSFUL Execution:
+=====================
+
+"""It can perform division on integer elements."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>>
+>>> print(matrix_divided(matrix, 3))
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+>>>
+
+"""It can perform division on float elements."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1.4, 2, 3], [4, 5, 6.9]]
+>>>
+>>> print(matrix_divided(matrix, 3))
+[[0.47, 0.67, 1.0], [1.33, 1.67, 2.3]]
+>>>
+
+=================
+FAILED Execution:
+=================
+
+"""Cannot perform division on string elements."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>>
+>>> print(matrix_divided(matrix, "string"))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 21, in matrix_divided
+    raise TypeError("div must be a number")
+TypeError: div must be a number
+>>>
+
+"""Cannot perform if there are NO elements to divide."""
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>>
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>>
+>>> print(matrix_divided(matrix, None))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/greyleaf/Documents/holbertonschool-higher_level_programming/holbertonschool-higher_level_programming/python-test_driven_development/2-matrix_divided.py", line 21, in matrix_divided
+    raise TypeError("div must be a number")
+TypeError: div must be a number
+>>> 
