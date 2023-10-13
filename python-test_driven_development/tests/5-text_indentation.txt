@@ -1,0 +1,109 @@
+# 5-text_indentation.txt : test file
+
+=======================================
+"5-text_indentation.py" function's intention.
+=======================================
+
+In this module, we are defining a function that after finding
+certain characters, will create 2 new lines.
+
+Prototype:
+    def text_indentation(text)
+
+====================
+How to use function.
+====================
+
+The 'text_indentation(...)' returns two lines after
+'.', '?', and ':'.
+
+=====================
+SUCCESSFUL Execution:
+=====================
+
+"""Prints two lines after specified characters."""
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>>
+    >>> text_indentation("Lava Cake?")
+    Lava Cake?
+    """BLANKSPACE"""
+    >>> text_indentation("Cheesecake.")
+    Cheesecake.
+    """BLANKSPACE"""
+    >>> text_indentation("Cookies:")
+    Cookies:
+    """BLANKSPACE"""
+
+"""Having space between arguments."""
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>>
+    >>> text_indentation("  Lava Cake?  Cheesecake.  Cookies:  ")
+    Lava Cake?
+    """BLANKSPACE"""
+    Cheesecake.
+    """BLANKSPACE"""
+    Cookies:
+    """BLANKSPACE"""
+    >>>
+
+"""Statement of multiple lines."""
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>>
+    >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. \
+    ... Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? \
+    ... Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: \
+    ... Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. \
+    ... Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum \
+    ... rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo \
+    ... stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum \
+    ... cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio \
+    ... beatiorem! Iam ruinas videres""")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    """BLANKSPACE"""
+    Quonam modo?
+    """BLANKSPACE"""
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    """BLANKSPACE"""
+    Non autem hoc:
+    """BLANKSPACE"""
+    igitur ne illud quidem.
+    """BLANKSPACE"""
+    Fortasse id optimum, sed ubi illud:
+    """BLANKSPACE"""
+    Plus semper voluptatis?
+    """BLANKSPACE"""
+    Teneo, inquit, finem illi videri nihil dolere.
+    """BLANKSPACE"""
+    Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens.
+    """BLANKSPACE"""
+    Si id dicis, vicimus.
+    """BLANKSPACE"""
+    Inde sermone vario sex illa a Dipylo stadia confecimus.
+    """BLANKSPACE"""
+    Sin aliud quid voles, postea.
+    """BLANKSPACE"""
+    Quae animi affectio suum cuique tribuens atque hanc, quam dico.
+    """BLANKSPACE"""
+    Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres>>>
+    >>>
+
+=================
+FAILED Execution:
+=================
+
+"""Integer arguments."""
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>>
+>>> text_indentation(2)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>>
+
+"""No arguments."""
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>>
