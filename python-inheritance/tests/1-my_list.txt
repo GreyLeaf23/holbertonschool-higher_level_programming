@@ -1,0 +1,43 @@
+# 1-my_list.txt : test file
+
+=======================================
+"1-my_list.py" function's intention.
+=======================================
+
+In this module, we are defining a function that inherits
+attributes and methods from a class. It displays the con-
+tents from ascending order.
+
+Prototype:
+    def print_sorted(self)
+
+====================
+How to use function.
+====================
+
+The 'print_sorted(...)' returns a list of integers in
+ascending order.
+
+Import method use in testing:
+>>> MyList = __import__('1-my_list').MyList
+
+=====================
+SUCCESSFUL Execution:
+=====================
+"""Print integers in ascending order or as inputted."""
+>>> my_list = MyList()
+>>>
+>>> my_list.append(2)
+>>> my_list.append(-7)
+>>> my_list.append(98)
+>>>
+>>> my_list.print_sorted()
+[-7, 2, 98]
+>>> print(my_list)
+[2, -7, 98]
+>>> 
+
+=================
+FAILED Execution:
+=================
+
