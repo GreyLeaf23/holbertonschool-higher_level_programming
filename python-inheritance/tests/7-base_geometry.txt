@@ -1,0 +1,35 @@
+# 7-base_geometry.txt : documentation file
+
+=======================================
+"7-base_geometry.py" function's intention.
+=======================================
+
+In this module, we are defining a method that validates
+if the inputted value is an integer or not.
+
+Prototype:
+    def integer_validator(self, name, value)
+
+====================
+How to use function.
+====================
+
+The 'integer_validator(...)' validates the argument 'value'
+if it meets with the desired requirements.
+
+Import method use in testing:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+=====================
+SUCCESSFUL Execution:
+=====================
+"""Does NOT return anything if requirements are met.""""
+>>> bg = BaseGeometry()
+>>>
+>>> bg.integer_validator("Hungry?", 711)
+>>> 
+
+=================
+FAILED Execution:
+=================
+
