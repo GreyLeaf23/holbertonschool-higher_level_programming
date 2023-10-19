@@ -51,7 +51,24 @@ FAILED Execution:
     TypeError: Hungry? must be an integer
     >>>
 
-"""Missing a required argument."""
+"""Integer can not be zero or negative."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: Hungry? must be greater than 0
+    >>>
+
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", -67)
+    Traceback (most recent call last):
+    ...
+    ValueError: Hungry? must be greater than 0
+    >>>
+
+"""Missing a required arguments."""
     >>> bg = BaseGeometry()
     >>>
     >>> bg.integer_validator("Hungry?", )
@@ -60,10 +77,34 @@ FAILED Execution:
     TypeError: integer_validator() missing 1 required positional argument: 'value'
     >>>
 
-"""List as an argument."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    >>>
+
+"""Data structures as arguments."""
     >>> bg = BaseGeometry()
     >>>
     >>> bg.integer_validator("Hungry?", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: Hungry? must be an integer
+    >>>
+
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", (1, 2, 3))
+    Traceback (most recent call last):
+    ...
+    TypeError: Hungry? must be an integer
+    >>>
+
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", {1, 2, 3})
     Traceback (most recent call last):
     ...
     TypeError: Hungry? must be an integer
