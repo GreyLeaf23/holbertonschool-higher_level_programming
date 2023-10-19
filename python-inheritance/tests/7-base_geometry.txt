@@ -24,12 +24,47 @@ Import method use in testing:
 SUCCESSFUL Execution:
 =====================
 """Does NOT return anything if requirements are met.""""
->>> bg = BaseGeometry()
->>>
->>> bg.integer_validator("Hungry?", 711)
->>> 
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", 711)
+    >>>
 
 =================
 FAILED Execution:
 =================
 
+"""Area implementation does not work."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+    >>>
+
+"""No integer in place."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", None)
+    Traceback (most recent call last):
+    ...
+    TypeError: Hungry? must be an integer
+    >>>
+
+"""Missing a required argument."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", )
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+    >>>
+
+"""List as an argument."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: Hungry? must be an integer
+    >>>
