@@ -62,3 +62,7 @@ python-input_output/1-main.py
 python-input_output/file_append.txt
 python-input_output/2-main.py
 python-input_output/3-main.py
+python-input_output/my_dict.json
+python-input_output/my_list.json
+python-input_output/my_set.json
+python-input_output/5-main.py
