@@ -109,3 +109,30 @@ FAILED Execution:
     ...
     TypeError: Hungry? must be an integer
     >>>
+
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", {"pizza": 5})
+    Traceback (most recent call last):
+    ...
+    TypeError: Hungry? must be an integer
+    >>>
+
+
+"""Booleans does not work."""
+    >>> bg = BaseGeometry()
+    >>>
+    >>> bg.integer_validator("Hungry?", True)
+    Traceback (most recent call last):
+    ...
+    TypeError: Hungry? must be an integer
+    >>>
+
+"""Secondary string does not work."""
+>>> bg = BaseGeometry()
+>>>
+>>> bg.integer_validator("Hungry?", "Yes")
+Traceback (most recent call last):
+...
+TypeError: Hungry? must be an integer
+>>>
