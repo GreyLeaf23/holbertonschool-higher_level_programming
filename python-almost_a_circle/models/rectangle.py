@@ -80,3 +80,10 @@ def area(self):
     """Rectangle Area"""
     return self.__width * self.__height
 
+def display(self):
+    """Displays Rectangle."""
+    for ver in range(self.__y):
+        print("")
+    for hor in range(self.__height):
+        print(" " * self.__x, end="")
+        print("#" * self.__width)
