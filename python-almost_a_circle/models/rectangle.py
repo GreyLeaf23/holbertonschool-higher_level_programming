@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module defines a class named Rectangle."""
 
+
 from models.base import Base
 
 
@@ -18,7 +19,7 @@ def __init__(self, width, height, x=0, y=0, id=None):
 @property
 def width(self):
     """Gets private attribute - Width."""
-    return(self.__width)
+    return self.__width
 
 @width.setter
 def width(self, value):
@@ -33,7 +34,7 @@ def width(self, value):
 @property
 def height(self):
     """Gets private attribute - Height."""
-    return(self.__height)
+    return self.__height
 
 @height.setter
 def height(self, value):
@@ -48,7 +49,7 @@ def height(self, value):
 @property
 def x(self):
     """Gets private attribute - X."""
-    return(self.__x)
+    return self.__x
 
 @x.setter
 def x(self, value):
@@ -63,7 +64,7 @@ def x(self, value):
 @property
 def y(self):
     """Gets private attribute - Y."""
-    return(self.__y)
+    return self.__y
 
 @y.setter
 def y(self, value):
@@ -74,3 +75,8 @@ def y(self, value):
         raise ValueError("y must be > 0.")
     else:
         self.__y = value
+
+def area(self):
+    """Rectangle Area"""
+    return self.__width * self.__height
+
