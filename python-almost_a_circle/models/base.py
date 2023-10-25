@@ -4,14 +4,17 @@ Module defines a class named Base and works as the foundation for the project.
 """
 
 
-import json
+from os import path
 import csv
+import json
+
 
 class Base:
     """Creation class Base"""
 
-    """Keeps count of number of objects."""
+
 __nb_objects = 0
+
 
 def __init__(self, id=None):
     """Method initializes objects with an id."""

@@ -8,6 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     """Creating class Rectangle with its dimensional elements."""
 
+
 def __init__(self, width, height, x=0, y=0, id=None):
     """Dimensional elements of Rcetangle."""
     super().__init__(id)
@@ -16,10 +17,12 @@ def __init__(self, width, height, x=0, y=0, id=None):
     self.x = x
     self.y = y
 
+
 @property
 def width(self):
     """Gets private attribute - Width."""
     return self.__width
+
 
 @width.setter
 def width(self, value):
@@ -31,10 +34,12 @@ def width(self, value):
     else:
         self.__width = value
 
+
 @property
 def height(self):
     """Gets private attribute - Height."""
     return self.__height
+
 
 @height.setter
 def height(self, value):
@@ -46,10 +51,12 @@ def height(self, value):
     else:
         self.__height = value
 
+
 @property
 def x(self):
     """Gets private attribute - X."""
     return self.__x
+
 
 @x.setter
 def x(self, value):
@@ -61,10 +68,12 @@ def x(self, value):
     else:
         self.__x = value
 
+
 @property
 def y(self):
     """Gets private attribute - Y."""
     return self.__y
+
 
 @y.setter
 def y(self, value):
@@ -76,9 +85,11 @@ def y(self, value):
     else:
         self.__y = value
 
+
 def area(self):
     """Rectangle Area"""
     return self.__width * self.__height
+
 
 def display(self):
     """Displays Rectangle."""
@@ -88,6 +99,7 @@ def display(self):
         print(" " * self.__x, end="")
         print("#" * self.__width)
 
+
 def __str__(self):
     """
     Overrides method so it returns specified value.
@@ -96,3 +108,20 @@ def __str__(self):
     return "[{:s}] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
         self.__class_.__name__, self.id, self.__x, self.__y,
         self.__width, self.__height)
+
+
+def update(self, *args, **kwargs):
+    """Assigns arguments to each attribute."""
+    if args:
+        attr_list = ["id", "width", "height", "x", "y"]
+        for item in range(len(args)):
+            setattr(self, attr_list[item], args[item])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+
+def to_dictionary(self):
+    """Returns Rectangle as dictionary."""
+    attr_list = ["id", "width", "height", "x", "y"]
+    return {key: getattr(self, key) for key in attr_list}
