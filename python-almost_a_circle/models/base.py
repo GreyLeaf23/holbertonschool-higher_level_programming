@@ -6,7 +6,7 @@ Module defines a class named Base and works as the foundation for the project.
 
 from os import path
 import json
-
+import csv
 
 class Base():
     """Creation class Base"""
