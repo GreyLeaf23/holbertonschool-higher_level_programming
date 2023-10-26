@@ -13,7 +13,6 @@ class Base:
     """Creation class Base"""
     __nb_objects = 0
 
-
     def __init__(self, id=None):
         """Method initializes objects with an id."""
         if id is not None:
