@@ -113,17 +113,17 @@ class Rectangle(Base):
                 if i == 4:
                     self.y = args[i]
             else:
-               for kw in kwargs:
-                if kw == "id":
-                    self.id = (kwargs[kw])
-                if kw == "width":
-                    self.width = (kwargs[kw])
-                if kw == "height":
-                    self.height = (kwargs[kw])
-                if kw == "x":
-                    self.x = (kwargs[kw])
-                if kw == "y":
-                    self.y = (kwargs[kw])
+                for kw in kwargs:
+                    if kw == "id":
+                        self.id = (kwargs[kw])
+                    if kw == "width":
+                        self.width = (kwargs[kw])
+                    if kw == "height":
+                        self.height = (kwargs[kw])
+                    if kw == "x":
+                        self.x = (kwargs[kw])
+                    if kw == "y":
+                        self.y = (kwargs[kw])
 
     def to_dictionary(self):
         """Returns Rectangle as dictionary."""
