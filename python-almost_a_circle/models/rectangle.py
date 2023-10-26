@@ -16,12 +16,10 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-
     @property
     def width(self):
         """Gets private attribute - Width."""
         return self.__width
-
 
     @width.setter
     def width(self, value):
@@ -33,12 +31,10 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-
     @property
     def height(self):
         """Gets private attribute - Height."""
         return self.__height
-
 
     @height.setter
     def height(self, value):
@@ -50,12 +46,10 @@ class Rectangle(Base):
         else:
             self.__height = value
 
-
     @property
     def x(self):
         """Gets private attribute - X."""
         return self.__x
-
 
     @x.setter
     def x(self, value):
@@ -67,12 +61,10 @@ class Rectangle(Base):
         else:
             self.__x = value
 
-
     @property
     def y(self):
         """Gets private attribute - Y."""
         return self.__y
-
 
     @y.setter
     def y(self, value):
@@ -84,11 +76,9 @@ class Rectangle(Base):
         else:
             self.__y = value
 
-
     def area(self):
         """Rectangle Area"""
         return self.__width * self.__height
-
 
     def display(self):
         """Displays Rectangle."""
@@ -97,7 +87,6 @@ class Rectangle(Base):
         for hor in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
-
 
     def __str__(self):
         """
@@ -108,7 +97,6 @@ class Rectangle(Base):
             self.__class_.__name__, self.id, self.__x, self.__y,
             self.__width, self.__height)
 
-
     def update(self, *args, **kwargs):
         """Assigns arguments to each attribute."""
         if args:
@@ -118,7 +106,6 @@ class Rectangle(Base):
             else:
                 for key, value in kwargs.items():
                     setattr(self, key, value)
-
 
     def to_dictionary(self):
         """Returns Rectangle as dictionary."""
