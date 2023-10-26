@@ -19,14 +19,12 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-
     @staticmethod
     def to_json_string(list_dictionaries):
         """Returns JSON string representation of list dictionaries"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
-
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -39,14 +37,12 @@ class Base:
         with open(filename, mode="w") as f:
             f.write(cls.to_json_string(objs))
 
-
     @staticmethod
     def from_json_string(json_string):
         """Returns list of JSON string representing list of dictionaries."""
         if json_string is None or len(json_string) == 0:
             return []
         return json.loads(json_string)
-
 
     @classmethod
     def create(cls, **dictionary):
@@ -57,7 +53,6 @@ class Base:
             dummy = cls(1, 0, 0)
         dummy.update(**dictionary)
         return dummy
-
 
     @classmethod
     def load_from_file(cls):
