@@ -8,6 +8,7 @@ from os import path
 import json
 import csv
 
+
 class Base():
     """Creation class Base"""
     __nb_objects = 0
