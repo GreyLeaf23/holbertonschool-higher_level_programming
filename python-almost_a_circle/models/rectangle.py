@@ -101,31 +101,31 @@ class Rectangle(Base):
         """Assigns arguments to each attribute."""
         attr_list = ["id", "width", "height", "x", "y"]
         if args and len(args) != 0:
-            for item in range(len(args)):
-                if item == 0:
-                    self.id = args[item]
-                if item == 1:
-                    self.width = args[item]
-                if item == 2:
-                    self.width = args[item]
-                if item == 3:
-                    self.x = args[item]
-                if item == 4:
-                    self.y = args[item]
+            for i in range(len(args)):
+                if i == 0:
+                    self.id = args[i]
+                if i == 1:
+                    self.width = args[i]
+                if i == 2:
+                    self.height = args[i]
+                if i == 3:
+                    self.x = args[i]
+                if i == 4:
+                    self.y = args[i]
             else:
-                for kw in kwargs:
-                    if kw == "id":
-                        self.id = (kwargs[kw])
-                    if kw == "width":
-                        self.width = (kwargs[kw])
-                    if kw == "height":
-                        self.height = (kwargs[kw])
-                    if kw == "x":
-                        self.x = (kwargs[kw])
-                    if kw == "y":
-                        self.y = (kwargs[kw])
+               for kw in kwargs:
+                if kw == "id":
+                    self.id = (kwargs[kw])
+                if kw == "width":
+                    self.width = (kwargs[kw])
+                if kw == "height":
+                    self.height = (kwargs[kw])
+                if kw == "x":
+                    self.x = (kwargs[kw])
+                if kw == "y":
+                    self.y = (kwargs[kw])
 
     def to_dictionary(self):
         """Returns Rectangle as dictionary."""
-        attr_list = ["id", "width", "height", "x", "y"]
-        return {key: getattr(self, key) for key in attr_list}
+        return {"id": self.id, "width": self.width, "height": self.height,
+                "x": self.x, "y": self.y}
