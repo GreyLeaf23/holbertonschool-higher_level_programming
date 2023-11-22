@@ -1,4 +1,4 @@
--- Creates 'hbtn_0d_usa' that contains a table 'states'.
+-- Creates 'hbtn_0d_usa' database that contains a table 'states'.
 CREATE DATABASE IF NOT EXISTS `hbtn_0d_usa`;
 CREATE TABLE IF NOT EXISTS `hbtn_0d_usa`.`states` (
     PRIMARY KEY(`id`),
