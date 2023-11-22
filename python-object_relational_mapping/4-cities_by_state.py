@@ -11,8 +11,13 @@ if __name__ == "__main__":
     """Function that lists all cities from database hbtn_0e_4_usa"""
 
     # Connecting to a MySQL database.
-    cnx = MySQLdb.connect(host="localhost", port=3306, charset="utf8",
-                          user=sys.argv[1], passwd=sys.argv[2], database=sys.argv[3])
+    cnx = MySQLdb.connect(
+        host="localhost",
+        port=3306,
+        charset="utf8",
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        database=sys.argv[3])
 
     # Making cursor obj for execution.
     cur = cnx.cursor()

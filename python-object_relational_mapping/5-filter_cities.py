@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-Module to take user input and display all values in the states table of
-hbtn_0e_0_usa where name matches the argument.
+Module to take in the name of a state as an argument and lists
+all cities of that state, using the database hbtn_0e_4_usa.
 """
 
 
@@ -10,8 +10,8 @@ import sys
 
 if __name__ == "__main__":
     """
-    Function that takes user input and displays all values in the
-    states table of hbtn_0e_0_usa where name matches the argument.
+    Function that takes in the name of a state as an argument and lists
+    all cities of that state, using the database hbtn_0e_4_usa.
     """
 
     # Connecting to a MySQL database.
@@ -27,17 +27,17 @@ if __name__ == "__main__":
     cur = cnx.cursor()
 
     # Executing query.
-    cur.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC"
-        .format(sys.argv[4]))
+    cur.execute("SELECT cities.name FROM cities\
+                INNER JOIN states ON cities.state_id = states.id\
+                WHERE states.name = %s\
+                ORDER BY cities.id ASC", (sys.argv[4],))
 
     # Obtaining query results.
     query_rows = cur.fetchall()
 
     # Printing results.
     for row in query_rows:
-        if row[1][0] == sys.argv[4][0]:
-            print(row)
+        print(row[0], end=", " if row != query_rows[-1] else "\n")
 
     # Close cursor.
     cur.close()
