@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     # Printing results.
     print(", ".join([row[0] for row in query_rows]))
-    
+
     # Close cursor.
     cur.close()
 
