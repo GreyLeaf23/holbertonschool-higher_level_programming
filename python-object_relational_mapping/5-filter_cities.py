@@ -36,9 +36,8 @@ if __name__ == "__main__":
     query_rows = cur.fetchall()
 
     # Printing results.
-    for row in query_rows:
-        print(row[0], end=", " if row != query_rows[-1] else "\n")
-
+    print(", ".join([row[0] for row in query_rows]))
+    
     # Close cursor.
     cur.close()
 
