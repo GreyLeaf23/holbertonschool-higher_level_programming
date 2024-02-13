@@ -130,3 +130,5 @@ javascript-dom_manipulation/5-main.html
 javascript-dom_manipulation/6-main.html
 javascript-dom_manipulation/7-main.html
 javascript-dom_manipulation/8-main.html
+.gitignore
+.vscode
