@@ -4,7 +4,7 @@
 This is a fundational repository for learning languages considered 'Higher Level' at Holberton.
 The repository feautures Python as the main language of learning choice. But we also tap into SQL and Javascript learning.
 
-![Showcase]()
+![Showcase](https://github.com/GreyLeaf23/holbertonschool-higher_level_programming/blob/main/small.png)
 
 ## Motivation
 
