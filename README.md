@@ -130,6 +130,5 @@ Remember, the key to learning from this repository is active engagement. Don't j
 
 
 ## License
-A short snippet describing the license (MIT, Apache etc)
 
 MIT © [Christian Rosario]()
