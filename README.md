@@ -4,6 +4,8 @@
 This is a fundational repository for learning languages considered 'Higher Level' at Holberton.
 The repository feautures Python as the main language of learning choice. But we also tap into SQL and Javascript learning.
 
+![Showcase](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shiksha.com%2Fonline-courses%2Farticles%2Fall-about-high-level-language%2F&psig=AOvVaw3TzkvHkcKn5DzuPFn9NM1U&ust=1708040047431000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLDfnJr_q4QDFQAAAAAdAAAAABAJ)
+
 ## Motivation
 
 
